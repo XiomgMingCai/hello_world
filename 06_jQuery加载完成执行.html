@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="prototype.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+<input type="text" id="a" value="hallowolrd">
+<script>
+    jQuery.noConflict()
+    alert('这是prototype' + $.F('a') )
+    alert(jQuery('#a').val());
+
+    /*Query是有良好的封装，全局只有一个jQuery对象，不污染顶级域名。
+    jQuery默认使用"$"操作符，prototype等其他框架也是是使用"$"，于是，如果jQuery在其他库之后引入，那么jQuery将获得"$"使用权。这样的情况也很容易理解，毕竟JS是从上到下流式执行的。
+    同样的道理，如果在其他使用"$"的库之前引入jQuery，那么jQuery将不会占用"$"。
+*/
+</script>
+</body>
+</html>
