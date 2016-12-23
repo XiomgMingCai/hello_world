@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-<script src="jquery.js"></script>
+    <script src="jquery.js"></script>
 </head>
 <body>
-<p>hello world !</p>
+<p id="p">hello world !</p>
 <script>
-//用jQuery 得到的对象 就是jQuery 对象
+    //用jQuery 得到的对象 就是jQuery 对象
     var p = $('p');
-        alert(p.html())
+    alert(p.html());
+    //jQuery 对象不能使用DOM中的方法, 只能使用jQuery中的方法
+    //如果dom 对象中的方法 在jQuery库改写过 ,那么掉用的动漫对象中的方法
 </script>
 </body>
 </html>

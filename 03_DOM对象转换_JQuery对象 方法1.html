@@ -9,9 +9,9 @@
 
 <input type="text" id="a" value="hallowolrd">
 <script>
-    var input = $('input');
-// 1   alert(input[0].value);
-// 2  alert(input.get(0).value);
+    var input = document.getElementById('a')
+    alert($(input).val())
+    //$('') 包装起来就可以转换成jQuery 对象
 
 
 </script>
